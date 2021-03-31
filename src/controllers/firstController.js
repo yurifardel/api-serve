@@ -3,7 +3,7 @@ const crypto = require("crypto");
 const connection = require("../data/connect");
 
 module.exports = {
-  async indexedDB(req, res) {
+  async index(req, res) {
     const organization = await connection("controller").select("*");
 
     return res.json(organization);
